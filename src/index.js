@@ -95,10 +95,6 @@ function generatePart(input, key, maxHexLength) {
     acc *= (str.charCodeAt(charIndex) + charIndex * strLength) * key
     acc = removeTrailingZeros(acc)
 
-    while (getLengthOfHexByInt(acc) > maxHexLength) {
-      acc = Math.floor(acc / 10)
-    }
-
     charIndex++
   }
 
